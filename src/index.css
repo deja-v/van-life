@@ -112,10 +112,12 @@ header a:hover {
   justify-content: center;
 }
 .about-hero-image {
-
   max-width: 100%;
 }
 
+.about-page-container{
+  padding:  0 50px 50px;
+}
 .about-page-content {
   padding-inline: 23px;
   color: #161616;
