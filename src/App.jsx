@@ -3,23 +3,20 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import "./server.js"
-import Vans from './pages/Vans.jsx';
-import VanDetails from './pages/VanDetails.jsx';
+import Vans from './pages/vans/Vans.jsx';
+import VanDetails from './pages/vans/VanDetails.jsx';
+import Layout from './components/Layout.jsx';
 export default function App() {
   return (
     <BrowserRouter>
-      <header>
-        <Link className="site-logo" to="/">#VanLife</Link>
-        <nav>
-          <Link to="/about">About</Link>
-          <Link to="/vans">Vans</Link>
-        </nav>
-      </header>
+      
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />}/>
-        <Route path="/vans/:id" element={<VanDetails />}/>
+        <Route element={<Layout/>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/vans" element={<Vans />}/>
+            <Route path="/vans/:id" element={<VanDetails />}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   )
