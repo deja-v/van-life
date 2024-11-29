@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import "./server.js"
 import Vans from './pages/Vans.jsx';
+import VanDetails from './pages/VanDetails.jsx';
 export default function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />}/>
+        <Route path="/vans/:id" element={<VanDetails />}/>
       </Routes>
     </BrowserRouter>
   )
