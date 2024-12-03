@@ -3,10 +3,16 @@
 }
 
 html, body {
-  margin: 0;
+  margin: 0 0 100px;
   padding: 0;
   background-color: #FFF7ED;
   font-family: "Inter", sans-serif;
+}
+
+html {
+  margin-bottom: 0;
+  position: relative;
+  min-height: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -35,6 +41,11 @@ footer {
   align-items: center;
   margin-top: auto;
   font-weight: 500;
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
 }
 
 header .site-logo {
@@ -322,4 +333,42 @@ a.active-link {
   font-weight: bold;
   text-decoration: underline;
   color: #161616;
+}
+
+.host-van-link-wrapper {
+  color: unset;
+  text-decoration: unset;
+}
+
+.host-vans-list {
+  padding-inline: 26px;
+}
+
+.host-vans-title {
+  padding-inline: 26px;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding-block: 18px;
+  padding-left: 24px;
+}
+
+.host-van-single > img {
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+
+.host-van-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-block: 10px;
+}
+
+.host-van-info p {
+  margin-block: 10px;
 }
