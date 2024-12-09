@@ -16,6 +16,7 @@ import HostVanInfo from './pages/host/HostVanInfo.jsx';
 import HostVanPhotos from './pages/host/HostVanPhotos.jsx'
 import HostVanPricing from './pages/host/HostVanPricing.jsx'
 import NotFound from './pages/NotFound.jsx';
+import Login from './pages/login.jsx';
 export default function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />}/>
             <Route path="/vans/:id" element={<VanDetails />}/>
+            <Route path='/login' element={<Login/>}/>
             <Route path="/host" element={<HostLayout/>}>
               <Route index element={<Dashboard />} />
               <Route path="/host/income" element={<Income/>}/>
