@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -18,7 +18,9 @@ import HostVanPricing from './pages/host/HostVanPricing.jsx'
 import NotFound from './pages/NotFound.jsx';
 import Login from './pages/login.jsx';
 import AuthRequired from './components/AuthRequired.jsx';
+
 export default function App() {
+  const [authenticated,setAuthenticated] = useState(false)
   return (
     <BrowserRouter>
       
@@ -28,9 +30,9 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />}/>
             <Route path="/vans/:id" element={<VanDetails />}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path='/login' element={<Login setAuthenticated={setAuthenticated}/>}/>
             
-            <Route element={<AuthRequired/>}>
+            <Route element={<AuthRequired authenticated={authenticated}/>}>
               <Route path="/host" element={<HostLayout/>}>
                 <Route index element={<Dashboard />} />
                 <Route path="/host/income" element={<Income/>}/>
